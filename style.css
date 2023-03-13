@@ -296,32 +296,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 5rem;
-}
-
-.informacao-container .box {
-    flex: 1 1 10rem;
-    background: var(--second-color);
-    padding: 140px;
-    display: flex;
-    text-align:justify;
-    flex-direction: column;
-    align-items:flex-start;
-    margin-top: 3rem;
-    border-radius: 0.1rem;
-}
-
-.informacao-container .box {
-    width: 150px;
-    height: 150px;
-    margin-top: -100px;
-}
-
-.informacao-container .box {
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    object-position: center;
+    margin-top: 2rem;
 }
 
 .informacao-container .box .bx {
@@ -331,17 +306,41 @@ header {
 .informacao-container .box h2 {
     color: var(--main-color);
     font-size: 1.2rem;
+    gap: 1rem;
 }
 
 .box .btn {
-    border: 2px solid var(--main-color);
     color: var(--main-color);
     margin-top: 4rem;
+}
+
+.btn {
+    border: 2px solid var(--main-color);
+    display: flex;
+    margin-top: 15px;
+    margin-left: 0.3rem;
+    justify-content: center;
+    padding: 0.6em 2.1em;
+    align-items: center;
+    width: 18rem;
 }
 
 .box .btn:hover{
     background: var(--main-color);
     color: var(--second-color);
+}
+
+.card{
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: var(--second-color);
+    margin: 10px;
+}
+
+.info {
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 
