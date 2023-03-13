@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-color:#005ea8;
+    --second-color: #ffffff;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+*::selection {
+    color: #fff;
+    background: var(--main-color);
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--main-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #ebdbc8;
+    
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+.inicio {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--main-color);
+    gap: 1rem;
+}
+
+.inicio-text {
+    flex: 1 1 17rem;
+}
+
+.inicio-img {
+    flex: 1 1 17rem;
+}
+
+.inicio-img img {
+    animation: animate 3s linear infinite;
+    border-radius: 10%;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-11px, 0);
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11px, 0);
+    }
+}
+
+.inicio-text span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--second-color)
+}
+
+.inicio-text h1 {
+    font-size: 3.2rem;
+    color: var(--second-color);
+    font-weight: bolder;
+}
+
+.inicio-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--second-color);
+    text-transform: uppercase;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+    padding: 7px 16px;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color: var(--main-color);
+    font-weight: 500;
+    background: var(--second-color);
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    color: #fff;
+    background: var(--main-color);
+}
+
+.btn:active {
+    transform: translate(10px, 10px);
+    box-shadow: 0px 15px 20px #ffff;
+    transition: all 0.3s ease 0s;
+}
+
+.heading {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.heading span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.heading h1 {
+    font-size: 2rem;
+    color:var(--main-color);
+}
+
+.btn-verificar {
+    padding: 7px 16px;
+    border: 2px solid var(--main-color);
+    border-radius: 40px;
+    color: var(--second-color);
+    font-weight: 500;
+    background: var(--main-color);
+    transition: all 0.3s ease 0s;
+}
+
+.btn-verificar:hover {
+    color: var(--main-color);
+    background: var(--second-color);
+}
+
+.btn-verificar:active {
+    transform: translate(10px, 10px);
+    box-shadow: 0px 15px 20px #ffff;
+    transition: all 0.3s ease 0s;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.verificar-img {
+    flex: 1 1 21rem;
+}
+
+.verificar-text {
+    flex: 1 1 21rem;
+    color: var(--main-color)
+}
+
+.verificar-text h2 {
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+.verificar-text p {
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--main-color);
+    gap: 1.5rem;
+}
+
+.sobre-img {
+    flex: 1 1 17rem;
+}
+
+.sobre-text {
+    flex: 1 1 17rem;
+}
+
+.sobre-text h2 {
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+
+.sobre-text p {
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+    color: var(--second-color);
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social a {
+    font-size: 27px;
+    margin: 0.5rem;
+}
+
+.social a .bx {
+    padding: 5px;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.social a .bx:hover {
+    background: var(--main-color);
+}
+
+.link {
+    margin: 1rem 0 1rem;
+}
+.links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+
+.link a:hover {
+    color:var(--main-color);
+}
+
+.contatos p {
+    text-align: center;
+}
+
+.copy {
+    color: var(--main-color);
+}
+
+@media (max-width: 1150px){
+    header {
+        padding:18px 7%;
+    }
+    section {
+        padding: 50px 7%;
+    }
+    .inicio-text h1 {
+        font-size: 3rem;
+    }
+    .inicio-text h2 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 991px){
+    header {
+        padding:18px 4%;
+    }
+    section {
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px){
+    header {
+        padding:11px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: left;
+    }
+    .navba.active {
+        top: 100%;
+    }
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+    .inicio-text span {
+        font-size: 0.9rem;
+    }
+    .inicio-text h1 {
+        font-size: 2.4rem;
+    }
+    .inicio-text h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .inicio-text {
+        padding-top: inherit;
+    }
+    .estoque-container .box {
+        margin-top: 6rem;
+    }
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+    .heading span {
+        font-size: 0.9rem;
+    }
+    .sobre {
+        flex-direction: column-reverse;
+    }
+    
+}
+
