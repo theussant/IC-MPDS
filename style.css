@@ -14,6 +14,7 @@
 :root {
     --main-color:#005ea8;
     --second-color: #ffffff;
+    --third-color: #0087C4;
 }
 
 section {
@@ -50,7 +51,8 @@ header {
 }
 
 .logo img {
-    width: 60px;
+    width: 70px;
+    height: 30px;
 }
 
 .navbar {
@@ -66,7 +68,7 @@ header {
 }
 
 .navbar a:hover {
-    color: #ebdbc8;
+    color: var(--third-color);
     
 }
 
@@ -82,34 +84,14 @@ header {
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items:center;
     background: var(--main-color);
     gap: 1rem;
+    text-align: center;
 }
 
 .inicio-text {
     flex: 1 1 17rem;
-}
-
-.inicio-img {
-    flex: 1 1 17rem;
-}
-
-.inicio-img img {
-    animation: animate 3s linear infinite;
-    border-radius: 10%;
-}
-
-@keyframes animate {
-    0%{
-        transform: translate(-11px, 0);
-    }
-    50%{
-        transform: translate(-0px, -11px);
-    }
-    100%{
-        transform: translate(-11px, 0);
-    }
 }
 
 .inicio-text span {
@@ -183,9 +165,32 @@ header {
 .btn-verificar:hover {
     color: var(--main-color);
     background: var(--second-color);
+    border: 2px solid var(--main-color);
 }
 
 .btn-verificar:active {
+    transform: translate(10px, 10px);
+    box-shadow: 0px 15px 20px #ffff;
+    transition: all 0.3s ease 0s;
+}
+.btn-verificar-index {
+    padding: 7px 16px;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color: var(--main-color);
+    font-weight: 500;
+    background: var(--second-color);
+    transition: all 0.3s ease 0s;
+    padding: 0.6em 2.1em;
+}
+
+.btn-verificar-index:hover {
+    color: var(--second-color);
+    background: var(--main-color);
+    border: 2px solid var(--second-color);
+}
+
+.btn-verificar-index:active {
     transform: translate(10px, 10px);
     box-shadow: 0px 15px 20px #ffff;
     transition: all 0.3s ease 0s;
@@ -290,6 +295,7 @@ header {
 
 .verificar-img {
     flex: 2 2 25rem;
+    margin-top: 2rem;
 }
 
 .informacao-container {
@@ -325,9 +331,10 @@ header {
     width: 18rem;
 }
 
-.box .btn:hover{
+.btn:hover{
     background: var(--main-color);
     color: var(--second-color);
+    border: 2px solid var(--second-color);
 }
 
 .card{
@@ -343,7 +350,11 @@ header {
     margin-top: 1rem;
 }
 
+/* 
 
+Media Querys:
+
+*/
 
 @media (max-width: 1150px){
     header {
