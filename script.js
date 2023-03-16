@@ -8,15 +8,15 @@ fetch("https://raw.githubusercontent.com/theussant/IC-MPDS/master/assets/sistema
 // Requisição do arquivo RAW do GitHub usando a função "fetch" do JavaScript.
 
 
-function carregarImagem(url) {
-	var canvas = document.getElementById('raw');
+/* function carregarImagem(url) {
+	var canvas = document.getElementById('canvas');
 	var context = canvas.getContext('2d');
 	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 	request.responseType = 'arraybuffer';
 	request.onload = function() {
 		var bytes = new Uint8ClampedArray(request.response);
-		var imageData = new ImageData(bytes, largura, altura);
+		var imageData = new ImageData(bytes, 557, 516);
 		canvas.width = 557;
 		canvas.height = 516;
 		context.putImageData(imageData, 0, 0);
@@ -24,4 +24,4 @@ function carregarImagem(url) {
 	request.send();
 }
 
-carregarImagem('https://raw.githubusercontent.com/theussant/IC-MPDS/master/assets/sistema.PNG');
+carregarImagem('https://raw.githubusercontent.com/theussant/IC-MPDS/master/assets/sistema.PNG'); */
