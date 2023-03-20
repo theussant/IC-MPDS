@@ -1,4 +1,4 @@
-fetch("https://github.com/theussant/IC-MPDS/blob/master/received-images/lab-2.jpg?raw=true")
+/* fetch("https://github.com/theussant/IC-MPDS/blob/master/received-images/lab-2.jpg?raw=true")
         .then(response => response.text())
         .then(data => {
             document.querySelector("#raw-content").textContent = data;
@@ -6,7 +6,7 @@ fetch("https://github.com/theussant/IC-MPDS/blob/master/received-images/lab-2.jp
 
 
 // Requisição do arquivo RAW do GitHub usando a função "fetch" do JavaScript.
-
+ */
 function loadImages() {
 	fetch('./received-images/')
 	  .then(response => response.text())
