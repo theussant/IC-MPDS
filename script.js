@@ -26,4 +26,6 @@ function loadImages() {
   }
   
   loadImages();
-  
+
+
+// API Fetch do JavaScript para carregar os arquivos de imagem e a tag <img> para exibi-los na página.
