@@ -7,6 +7,7 @@
 
 // Requisição do arquivo RAW do GitHub usando a função "fetch" do JavaScript.
  */
+
 function loadImages() {
 	fetch('./received-images/')
 	  .then(response => response.text())
