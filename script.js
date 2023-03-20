@@ -9,7 +9,7 @@
  */
 
 function loadImages() {
-	fetch('https://github.com/theussant/IC-MPDS/tree/master/received-images')
+	fetch('../received-images')
 	  .then(response => response.text())
 	  .then(text => {
 		const parser = new DOMParser();
