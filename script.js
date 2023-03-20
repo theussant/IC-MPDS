@@ -7,21 +7,23 @@ fetch("https://github.com/theussant/IC-MPDS/blob/master/received-images/lab-2.jp
 
 // Requisição do arquivo RAW do GitHub usando a função "fetch" do JavaScript.
 
-
-/* function carregarImagem(url) {
-	var canvas = document.getElementById('canvas');
-	var context = canvas.getContext('2d');
-	var request = new XMLHttpRequest();
-	request.open('GET', url, true);
-	request.responseType = 'arraybuffer';
-	request.onload = function() {
-		var bytes = new Uint8ClampedArray(request.response);
-		var imageData = new ImageData(bytes, 557, 516);
-		canvas.width = 557;
-		canvas.height = 516;
-		context.putImageData(imageData, 0, 0);
-	};
-	request.send();
-}
-
-carregarImagem('https://raw.githubusercontent.com/theussant/IC-MPDS/master/assets/sistema.PNG'); */
+function loadImages() {
+	fetch('./received-images/')
+	  .then(response => response.text())
+	  .then(text => {
+		const parser = new DOMParser();
+		const html = parser.parseFromString(text, 'text/html');
+		const images = Array.from(html.querySelectorAll('a'))
+		  .filter(link => link.href.match(/\.(jpe?g|png|gif)$/))
+		  .map(link => link.href);
+		const gallery = document.querySelector('.slides');
+		images.forEach(image => {
+		  const img = document.createElement('img');
+		  img.src = image;
+		  gallery.appendChild(img);
+		});
+	  });
+  }
+  
+  loadImages();
+  
