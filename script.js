@@ -1,4 +1,4 @@
-fetch("https://github.com/theussant/IC-MPDS/blob/master/received-images/lab-2.jpg?raw=true")
+fetch("https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt")
         .then(response => response.text())
         .then(data => {
             document.querySelector("#raw-content").textContent = data;
