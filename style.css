@@ -359,7 +359,8 @@ header {
 
 
 
-.raw-content {
+#raw-content {
+    border: 3px solid var(--second-color);
     color: var(--second-color);
 }
 
