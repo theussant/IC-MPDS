@@ -88,8 +88,8 @@ fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt'
     const cor = text.trim().toLowerCase() === 'sim' ? 'green' : 'red';
     
     // alterar a cor do quadrado usando a propriedade style.background
-    const quadrado = document.getElementById('#raw-content');
-    quadrado.style.background = cor;
+    const content = document.getElementById('raw-content');
+    content.style.background = cor;
   });
 
 
