@@ -9,7 +9,7 @@
  */
 
 function loadImages() {
-	fetch('https://vercel.com/theussant/ic-mpds/master/source/received-images')
+	fetch('received-images')
 	  .then(response => response.text())
 	  .then(text => {
 		const parser = new DOMParser();
