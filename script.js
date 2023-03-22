@@ -81,7 +81,7 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
 // Script para verificar
 
 // ler o conteúdo do arquivo de texto usando a API Fetch
-fetch('info.txt')
+fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt')
   .then(response => response.text())
   .then(text => {
     // comparando arquivo de texto com as strings "sim" ou "não"
