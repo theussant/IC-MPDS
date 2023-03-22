@@ -357,6 +357,12 @@ header {
   }
   
 
+
+
+.raw-content {
+    color: var(--second-color);
+}
+
 /* 
 
 Media Querys:
