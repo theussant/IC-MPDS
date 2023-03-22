@@ -78,6 +78,23 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
 
 
 
+// Script para verificar
+
+// ler o conteúdo do arquivo de texto usando a API Fetch
+fetch('info.txt')
+  .then(response => response.text())
+  .then(text => {
+    // comparando arquivo de texto com as strings "sim" ou "não"
+    const cor = text.trim().toLowerCase() === 'sim' ? 'green' : 'red';
+    
+    // alterar a cor do quadrado usando a propriedade style.background
+    const quadrado = document.getElementById('#raw-content');
+    quadrado.style.background = cor;
+  });
+
+
+
+
 // Script para menu e navbar
 
 let menu = document.querySelector('#menu-icon');
