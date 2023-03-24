@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd
+#scp ubuntu@192.168.1.15:~/send.txt /home/rod/IC-MPDS/receive-images
+
+cd TESTE/
+cp response.txt ~/IC-MPDS/
+cd && cd IC-MPDS
+git remote set-url origin git@github.com:theussant/IC-MPDS.git
+git add response.txt
+git commit -m "response ok"
+git push
+
+
+
