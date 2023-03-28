@@ -44,7 +44,7 @@ const repo = "IC-MPDS";
 const path = "./data";
 const imageElement = document.getElementById("latest-image");
 
-fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
+fetch(`https://api.github.com/v3/repos/${user}/${repo}/contents/${path}?ref=main`)
   .then(response => response.json())
   .then(data => {
     const images = data.filter(item => item.type === "file" && item.name.match(/\.(jpg|jpeg|png|gif)$/i));
@@ -53,7 +53,6 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
     const imageUrl = newestImage.download_url;
     imageElement.src = imageUrl;
   });
-
 
 
 
