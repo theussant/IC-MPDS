@@ -85,7 +85,7 @@ fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt'
   .then(response => response.text())
   .then(text => {
     // comparando arquivo de texto com as strings "sim" ou "não"
-    const cor = text.trim().toLowerCase() === 'sim' ? 'green' : 'red';
+    const cor = text.trim().toLowerCase() === 'sim' ? 'red' : 'green';
     
     // alterar a cor do quadrado usando a propriedade style.background
     const content = document.getElementById('raw-content');
