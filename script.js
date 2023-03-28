@@ -39,7 +39,7 @@ usando gallery.appendChild(img). */
 
 // Teste de outro algoritmo:
 
-const user = "theussant";
+/* const user = "theussant";
 const repo = "IC-MPDS";
 const path = "./data";
 const imageElement = document.getElementById("latest-image");
@@ -52,7 +52,28 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
     const newestImage = images[0];
     const imageUrl = newestImage.download_url;
     imageElement.src = imageUrl;
-  });
+  }); */
+
+
+const user = "theussant";
+const repo = "IC-MPDS";
+const path = "./data";
+const imageElement = document.getElementById("latest-image");
+  
+  fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`, {
+    headers: {
+      Accept: "application/vnd.github.VERSION.raw"
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      const images = data.filter(item => item.type === "file" && item.name.match(/\.(jpg|jpeg|png|gif)$/i));
+      images.sort((a, b) => new Date(b.last_modified) - new Date(a.last_modified));
+      const newestImage = images[0];
+      const imageUrl = newestImage.download_url;
+      imageElement.src = imageUrl;
+    });
+  
 
 
 
