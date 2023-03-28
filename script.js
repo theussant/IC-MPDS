@@ -7,27 +7,6 @@ fetch("https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt"
 
 // Requisição do arquivo RAW do GitHub usando a função "fetch" do JavaScript.
 
-/* function loadImages() {
-	fetch('data')
-	  .then(response => response.text())
-	  .then(text => {
-		const parser = new DOMParser();
-		const html = parser.parseFromString(text, 'text/html');
-		const images = Array.from(html.querySelectorAll('a'))
-		  .filter(link => link.href.match(/\.(jpe?g|png|gif)$/))
-		  .map(link => link.href);
-		const gallery = document.querySelector('.slides');
-		images.forEach(image => {
-		  const img = document.createElement('img');
-		  img.src = image;
-		  gallery.appendChild(img);
-		});
-	  });
-  }
-  
-  loadImages(); */
-
-
 // API Fetch do JavaScript para carregar os arquivos de imagem e a tag <img> para exibi-los na página.
 
 
@@ -84,8 +63,8 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
 fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt')
   .then(response => response.text())
   .then(text => {
-    // comparando arquivo de texto com as strings "sim" ou "não"
-    const cor = text.trim().toLowerCase() === 'sim' ? 'red' : 'green';
+    // comparando arquivo de texto com as strings "tem vazamento" ou "não tem vazamento"
+    const cor = text.trim().toLowerCase() === 'tem vazamento' ? 'red' : 'green';
     
     // alterar a cor do quadrado usando a propriedade style.background
     const content = document.getElementById('raw-content');
