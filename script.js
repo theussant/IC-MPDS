@@ -60,7 +60,7 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
 // Script para verificar
 
 // ler o conteúdo do arquivo de texto usando a API Fetch
-fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/info.txt')
+fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/response.txt')
   .then(response => response.text())
   .then(text => {
     // comparando arquivo de texto com as strings "tem vazamento" ou "não tem vazamento"
