@@ -1,4 +1,4 @@
-fetch("https://raw.githubusercontent.com/theussant/IC-MPDS/master/data/response.txt")
+fetch("https://raw.githubusercontent.com/theussant/IC-MPDS/master/response.txt")
         .then(response => response.text())
         .then(data => {
             document.querySelector("#raw-content").textContent = data;
