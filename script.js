@@ -49,7 +49,7 @@ fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`)
   .then(data => {
     const images = data.filter(item => item.type === "file" && item.name.match(/\.(jpg|jpeg|png|gif)$/i));
     images.sort((a, b) => new Date(b.last_modified) - new Date(a.last_modified));
-    const newestImage = images[0];
+    const newestImage = images[6];
     const imageUrl = newestImage.download_url;
     imageElement.src = imageUrl;
   });
