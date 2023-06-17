@@ -11,7 +11,7 @@ git remote set-url origin git@github.com:theussant/IC-MPDS.git
 
 # Adicionar a imagem ao repositório Git.
 
-git add reconstructed_image_receivec.jpg
+git add data/reconstructed_image.jpg
 
 # Fazer o commit da imagem.
 
