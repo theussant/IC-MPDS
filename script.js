@@ -31,6 +31,7 @@ fetch('https://raw.githubusercontent.com/theussant/IC-MPDS/master/response.txt')
     
     // alterar a cor do quadrado usando a propriedade style.background
     const content = document.getElementById('raw-content');
+    content.innerText = cor === 'red' ? 'Tem vazamento' : 'Não tem vazamento';
     content.style.background = cor;
   });
 
